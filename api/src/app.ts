@@ -7,7 +7,7 @@ import config from './lib/config';
 interface error {
     status: number;
     message: string;
-}
+};
 
 const app: Application = express();
 app.use(express.urlencoded({ extended: true, limit: '50mb' })); //middleware
@@ -34,7 +34,6 @@ app.use((err: error, req: Request, res: Response, next: NextFunction) => {
 
 // Our routes
 import routes from './routes/';
-//-----------------------------------
 app.use('/api', routes);
 
 export default app;

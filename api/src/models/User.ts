@@ -1,8 +1,6 @@
-import { Model, Column, Table, CreatedAt, UpdatedAt, }
-    from "sequelize-typescript";
-import { sequelize } from "../db";
-import { DataTypes, ModelAttributes } from "sequelize";
-
+import {
+    Model, Column, Table, CreatedAt, UpdatedAt,
+} from "sequelize-typescript";
 
 
 @Table
