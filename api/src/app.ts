@@ -2,7 +2,7 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from "cors";
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
-import config from '../lib/config';
+import config from './lib/config';
 
 interface error {
     status: number;
@@ -30,10 +30,6 @@ app.use((err: error, req: Request, res: Response, next: NextFunction) => {
     const message = err.message || err;
     console.error(err);
     res.status(status).send(message);
-});
-
-app.get('/', (req: Request, res: Response) => {
-    res.send("Hola TypeScript");
 });
 
 // Our routes
