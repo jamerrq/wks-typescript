@@ -1,15 +1,10 @@
-import React from 'react';
-import './App.css';
-
-interface AppProps {
-    title: string;
-};
+import './App.css'
 
 
-function App({ title }: AppProps): JSX.Element {
-    return (
-        <div>Henry Workshop - {title}</div>
-    );
-};
+function App() {
+    return (<>
+    </>);
+}
 
-export default App;
+
+export default App
