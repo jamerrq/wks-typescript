@@ -50,7 +50,7 @@ ReactDOM.render(<App title="Typescript" />, document.querySelector('#root'));
 
 Si vamos a nuestra aplicación veremos lo siguiente:
 
-![screen1](./img-screens/1.png)
+![screen1](1.png)
 
 Como ya vimos durante la parte teórica, en Typescript necesitamos informar los tipos de datos que vamos a utilizat, en este caso de las propiedades que va a recibir cada componente, para ello utilizaremos una `interface`. Adicionalmente es una buena práctica si utilizamos componentes funcionales determinar el tipo de dato que va a retornar dicha función y no dejarlo libre para que Typescript haga la inferencia de datos. En este caso lo que estamos retornando es un JSX por lo que agregamos `JSX.Element`.
 
@@ -161,7 +161,7 @@ class App extends React.Component<AppProps> {
 
 Lo anterior fue simplemente para practicar el armado de un componente ya sea funcional o de clase pero ahora lo que vamos a intentar hacer es una aplicación utilizando también Redux que consuma una API que vamos a crear con express y muestre los resultados obtenidos. Por lo tanto los componentes que habíamos hecho hasta recién lamentablemente no van a servirnos más por lo que pueden ya eliminarlos y comenzar nuevamente de cero.
 
-![screen3](./img-screens/3.jpeg)
+![screen3](3.jpeg)
 
 ## Back-end
 
@@ -548,7 +548,7 @@ export default function reducer(state = initialState, action) {
 
 Nos va a arrojar el siguiente error:
 
-![screen2](./img-screens/2.png)
+![screen2](2.png)
 
 Nuevamente debido al chequeo de tipos que realiza Typescript vamos a tener que hacer algunos ajustes a nuestro reducer. Debemos definir las interfaces para nuestro estado y para nuestras actions. Podemos hacerlo directaente en ese mismo archivo del reducer.
 
@@ -591,7 +591,7 @@ ReactDOM.render(
 
 ¿Todo OK? Nop, Typescript otra vez...
 
-![screen4](./img-screens/4.png)
+![screen4](4.png)
 
 Para que el módulo de `react-redux` funcione correctamente con Typescript debemos adicionalmente instalar un módulo separado en donde están definido los tipos de datos. Si observamos en el mensaje de error incluso nos dice como hacerlo.
 
@@ -621,9 +621,9 @@ export const fetchUsers = () => {
 };
 ```
 
-![screen6](./img-screens/6.png)
+![screen6](6.png)
 
-![screen7](./img-screens/7.jpeg)
+![screen7](7.jpeg)
 
 A no desesperar, nuevamente lo que está ocurriendo es que debemos indicarle la estructura de datos al dispatch pero ahora ¿cómo hacemos si no conocemos exactamente como está implementada por dentro?
 
@@ -645,7 +645,7 @@ De antemano no podemos saberlo por lo que va a ser del tipo `any`. Por otro lado
 
 Vamos a mejorar un poco esto definiendo la estructura que debería tener la respuesta al GET. Para eso veamos que nos está devolviendo dicho endpoint:
 
-![screen8](./img-screens/8.png)
+![screen8](8.png)
 
 Como pueden observar en la imagen deberíamos tener:
 
@@ -874,7 +874,7 @@ useEffect(() => {
 
 Si observamos las request enviadas al abrir nuestra aplicación veremos que efectivamente el request para solicitar los USERS a la API están funcionando:
 
-![screen9](./img-screens/9.png)
+![screen9](9.png)
 
 **OPCIONAL**: Vamos a configurar redux devtools para poder ver y debuggear nuestra aplicación.
 
@@ -899,7 +899,7 @@ const store = createStore(
 export default store;
 ```
 
-![screen10](./img-screens/10.png)
+![screen10](10.png)
 
 Recuerden que el nombre de la acción figura como un 0 debido a que utilizamos un Enum con sus valores por defecto, si ustedes le asignaron un String van a ver dicho nombre allí.
 
@@ -924,13 +924,13 @@ function App(props: AppProps) {
 
 Con eso ya tendríamos un listado de nuestros Users
 
-![screen11](./img-screens/11.png)
+![screen11](11.png)
 
 #### Eliminar algun Users
 
 Para esta funcionalidad no habrá ningún tipo de ayuda, en función de todo lo que vimos hasta ahora deberán agregar un botón por cada User para que al hacerle click elimine dicho User del listado total.
 
-![screen12](./img-screens/12.jpg)
+![screen12](12.jpg)
 
 **AYUDA**: Para cuando tengan que en el reducer aceptar más de un tipo de action pueda hacer una unión utilizando al caracter `|`. Por ejemplo:
 
@@ -980,4 +980,4 @@ Adicionalmente para mejorar un poco la UX de nuestra paǵina sería bueno tener 
 
 Implementar dicha funcionalidad con lo visto hasta el momento.
 
-![screen13](./img-screens/13.jpg)
+![screen13](13.jpg)
