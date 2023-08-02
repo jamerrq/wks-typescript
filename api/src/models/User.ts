@@ -18,4 +18,4 @@ export class User extends Model<User> {
     @UpdatedAt
     @Column
     updatedAt!: Date;
-};
+}
