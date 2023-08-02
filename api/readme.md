@@ -14,6 +14,9 @@ This is the backend api server for our project!
 
 ![ESLint](https://img.shields.io/badge/ESLint%20-%234B32C3.svg?style=for-the-badge&logo=eslint&logoColor=white)
 ![Nodemon](https://img.shields.io/badge/Nodemon%20-%23000000.svg?style=for-the-badge&logo=nodemon&logoColor=white)
+![Mocha](https://img.shields.io/badge/Mocha%20-%238D6748.svg?style=for-the-badge&logo=mocha&logoColor=white)
+![Chai](https://img.shields.io/badge/Chai%20-%23F6ECD9.svg?style=for-the-badge&logo=chai&logoColor=black)
+![Supertest](https://img.shields.io/badge/Supertest%20-%23F6ECD9.svg?style=for-the-badge&logo=supertest&logoColor=black)
 
 ## Next Steps
 
@@ -27,3 +30,4 @@ This is the backend api server for our project!
 
 - `GET /users` - Get all users
 - `POST /users` - Create a new user
+

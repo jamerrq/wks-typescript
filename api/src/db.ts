@@ -3,7 +3,7 @@ import config from "./lib/config";
 config;
 
 
-export const sequelize = new Sequelize({
+const sequelize = new Sequelize({
 
     dialect: 'postgres',
     database: config.dbName,
@@ -24,3 +24,6 @@ export const sequelize = new Sequelize({
     },
     models: [__dirname + '/models'],
 });
+
+
+export default sequelize;
