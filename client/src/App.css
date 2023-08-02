@@ -4,3 +4,21 @@
     padding: 2rem;
     text-align: center;
 }
+
+#table-users {
+    margin: 0 auto;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-buttons {
+    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.trash-icon{
+    width: 20px;
+    height: 20px;
+}
