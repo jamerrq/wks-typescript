@@ -2,13 +2,13 @@ import { Sequelize } from "sequelize-typescript";
 import config from "./lib/config";
 config;
 
-
 const dbInstance = new Sequelize({
 
     dialect: 'postgres',
-    database: config.dbName,
-    password: config.dbPassword,
-    username: config.dbUser,
+    database: config.dbDeployName || config.dbName,
+    password: config.dbDeployPassword || config.dbPassword,
+    username: config.dbDeployUser || config.dbUser,
+    host: config.dbDeployHost || config.host,
     storage: ':memory:',
     logging: false,
     dialectOptions: {
@@ -23,6 +23,7 @@ const dbInstance = new Sequelize({
         freezeTableName: true,
     },
     models: [__dirname + '/models'],
+
 });
 
 

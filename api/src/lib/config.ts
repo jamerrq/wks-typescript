@@ -12,6 +12,12 @@ const config = {
     port: process.env.API_PORT || '3001',
     host: process.env.API_host || 'localhost',
     cors: process.env.CORS || '*',
+    dbDeploy: process.env.DB_DEPLOY ?? 'postgres',
+    dbDeployPassword: process.env.DB_DEPLOY_PASS ?? '1234',
+    dbDeployHost: process.env.DB_DEPLOY_HOST ?? 'localhost',
+    dbDeployName: process.env.DB_DEPLOY_NAME ?? 'workshop',
+    dbDeployUser: process.env.DB_DEPLOY_USER ?? 'postgres',
+
 };
 
 export default config;
