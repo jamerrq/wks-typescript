@@ -2,13 +2,17 @@
 
 This is the backend api server for our project!
 
+## [NEW!] Deployed to Render
+
+This project is now deployed to Render! You can find it at
+[here](https://wks-typescript-server.onrender.com/api/users).
+
 ## Technologies used
 
-![TypeScript](https://img.shields.io/badge/TypeScript%20-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Sequelize](https://img.shields.io/badge/Sequelize%20-%2343853D.svg?style=for-the-badge&logo=sequelize&logoColor=white)
 ![Express](https://img.shields.io/badge/Express%20-%23404d59.svg?style=for-the-badge&logo=express&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL%20-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Ts-Node](https://img.shields.io/badge/Ts--Node%20-%233178C6.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Render](https://img.shields.io/badge/Render%20-%23000000.svg?style=for-the-badge&logo=render&logoColor=white)
 
 ## Additional Dependencies
 
@@ -16,14 +20,13 @@ This is the backend api server for our project!
 ![Nodemon](https://img.shields.io/badge/Nodemon%20-%23000000.svg?style=for-the-badge&logo=nodemon&logoColor=white)
 ![Mocha](https://img.shields.io/badge/Mocha%20-%238D6748.svg?style=for-the-badge&logo=mocha&logoColor=white)
 ![Chai](https://img.shields.io/badge/Chai%20-%23F6ECD9.svg?style=for-the-badge&logo=chai&logoColor=black)
-![Supertest](https://img.shields.io/badge/Supertest%20-%23F6ECD9.svg?style=for-the-badge&logo=supertest&logoColor=black)
 
 ## Next Steps
 
-- More routes for users
-- Implement a user authentication system
-- Create tests for the api
-- Deploy to Render
+- [ ] More routes for users
+- [ ] Implement a user authentication system
+- [ ] Create tests for the api
+- [X] Deploy to Render
 
 ## Routes
 
