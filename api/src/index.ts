@@ -1,7 +1,7 @@
-import app from './src/app';
+import app from './app';
 import dotenv from 'dotenv';
 dotenv.config();
-import sequelize from './src/db';
+import sequelize from './db';
 
 
 const port = process.env.API_PORT || 3001;

@@ -23,6 +23,7 @@ This is the backend api server for our project!
 - More routes for users
 - Implement a user authentication system
 - Create tests for the api
+- Deploy to Render
 
 ## Routes
 

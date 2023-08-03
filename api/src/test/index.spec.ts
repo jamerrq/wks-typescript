@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import { it, describe } from 'mocha';
 
 // Import app
-import app from '../src/app';
+import app from '../app';
 
 // Mock User
 const mockUser = {
@@ -35,8 +35,8 @@ describe('Routes', () => {
         // Check response
         expect(res.status).to.equal(200);
         expect(res.body).to.be.an('array');
-        expect(res.body[0].name).to.equal(mockUser.name);
-        expect(res.body[0].lastName).to.equal(mockUser.lastName);
+        expect(res.body.at(-1).name).to.equal(mockUser.name);
+        expect(res.body.at(-1).lastName).to.equal(mockUser.lastName);
     });
 
 });

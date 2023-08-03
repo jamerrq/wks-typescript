@@ -28,10 +28,10 @@ router.post('/', (req: Request, res: Response) => {
 
     const user = req.body;
     User.create(user).then((userCreated) => {
-        res.status(201).send(userCreated);
+        return res.status(201).send(userCreated);
     }).catch((err) => {
         console.error(err);
-        res.sendStatus(500);
+        return res.sendStatus(500);
     });
 
 });
@@ -57,13 +57,13 @@ router.delete('/:id', async (req: Request, res: Response) => {
         if (user) {
             await user.destroy();
             // send user back
-            res.status(200).send(user);
+            return res.status(200).send(user);
         } else {
-            res.sendStatus(404);
+            return res.sendStatus(404);
         }
     } catch (err) {
         console.error(err);
-        res.sendStatus(500);
+        return res.sendStatus(500);
     }
 
 });
