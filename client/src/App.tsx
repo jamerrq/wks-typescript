@@ -2,7 +2,12 @@ import './App.css';
 import { connect } from 'react-redux';
 import { useEffect, } from 'react';
 import { fetchUsers, deleteUsers, addRandomUser } from './actions';
+
+// SVG Icons
 import TrashIcon from './icons/trash.svg';
+
+// Components
+import Switch from './components/Switch';
 
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -25,6 +30,7 @@ function App(props: AppProps): JSX.Element {
 
     return (<div>
         <h1>TypeScript Workshop</h1>
+        <Switch />
         <div>
             <div className="table-buttons">
                 <button onClick={() => fetchUsers()}>Fetch Users</button>
