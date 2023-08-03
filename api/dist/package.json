@@ -14,10 +14,19 @@
         "express": "^4.18.2",
         "morgan": "^1.10.0",
         "pg": "^8.11.1",
+        "reflect-metadata": "^0.1.13",
         "sequelize": "^6.32.1",
         "sequelize-typescript": "^2.1.5"
     },
-    "keywords": [],
+    "keywords": [
+        "typescript",
+        "node",
+        "express",
+        "sequelize"
+    ],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "engines": {
+        "node": "16.20.1"
+    }
 }
