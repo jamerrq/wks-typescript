@@ -1,10 +1,9 @@
-const Switch = () => {
+const Switch = ({ handleSwitch }: SwitchProps) => {
 
     return (
         <div className="container-switch">
-            <span>Change Theme </span>
             <label className="switch">
-                <input type="checkbox" />
+                <input type="checkbox" onChange={handleSwitch} />
                 <span className="slider"></span>
             </label>
         </div>

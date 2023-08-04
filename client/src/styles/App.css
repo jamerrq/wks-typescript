@@ -1,0 +1,166 @@
+#root {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    /* display: flex; */
+}
+
+#root * {
+    box-sizing: border-box;
+}
+
+#root>div {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+
+#main-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+#table-users {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+#table-users th,
+#table-users td {
+    padding: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* Add load transition */
+    /* transition: 0.3s all; */
+}
+
+.title {
+    font-size: 24pt;
+    margin-bottom: 15px;
+    margin-top: 5%;
+}
+
+.table-buttons {
+    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.table-buttons>button {
+    border: 2px solid var(--border);
+}
+
+.table-buttons>button:hover {
+    border: 2px solid var(--accent);
+}
+
+.trash-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+.App.dark {
+    background: #000;
+    color: #fff;
+    transition: 0.3s all;
+}
+
+.App.light {
+    background: #FFF6DC;
+    color: #000;
+    transition: 0.3s all;
+}
+
+.App p {
+    font-size: 24pt;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+    outline: 2px solid var(--border);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: var(--text-primary);
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+
+input:checked+.slider:before {
+    transform: translateX(1.5em);
+}

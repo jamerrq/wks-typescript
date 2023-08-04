@@ -44,4 +44,5 @@ export const addRandomUser = () => {
             payload: response.data
         });
     };
+
 };

@@ -24,3 +24,7 @@ interface AppProps {
     deleteUsers(id: number): void;
     addRandomUser(): void;
 }
+
+interface SwitchProps {
+    handleSwitch(): void;
+}
