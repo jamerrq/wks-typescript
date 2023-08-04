@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config = {
+
     dbUser: process.env.DB_USER || 'postgres',
     dbPassword: process.env.DB_PASSWORD || '1234',
     dbHost: process.env.DB_HOST || 'localhost',
@@ -17,6 +18,7 @@ const config = {
     dbDeployHost: process.env.DB_DEPLOY_HOST ?? 'localhost',
     dbDeployName: process.env.DB_DEPLOY_NAME ?? 'workshop',
     dbDeployUser: process.env.DB_DEPLOY_USER ?? 'postgres',
+    local: process.env.NODE_ENV === 'local',
 
 };
 

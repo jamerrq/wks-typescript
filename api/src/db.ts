@@ -5,10 +5,10 @@ config;
 const dbInstance = new Sequelize({
 
     dialect: 'postgres',
-    database: config.dbDeployName || config.dbName,
-    password: config.dbDeployPassword || config.dbPassword,
-    username: config.dbDeployUser || config.dbUser,
-    host: config.dbDeployHost || config.host,
+    database: config.local ? config.dbDeployName : config.dbName,
+    password: config.local ? config.dbDeployPassword : config.dbPassword,
+    username: config.local ? config.dbDeployUser : config.dbUser,
+    host: config.local ? config.dbDeployHost : config.host,
     storage: ':memory:',
     logging: false,
     dialectOptions: {
