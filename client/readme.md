@@ -32,3 +32,11 @@ TypeScript](https://img.shields.io/badge/React(TSX)%20-%2320232a.svg?style=for-t
 - [ ] Delete all users
 - [ ] Create new random user with mock data from an external API
 - [ ] Filters!
+
+## Preview (v1.0.0)
+
+### Light Mode
+![Light Mode](./assets/v1Light.png)
+
+### Dark Mode
+![Dark Mode](./assets/v1Dark.png)

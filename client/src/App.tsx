@@ -4,14 +4,11 @@ import { useEffect, useState } from 'react';
 import { fetchUsers, deleteUsers, addRandomUser } from './actions';
 
 // SVG Icons
-import TrashIcon from './icons/TrashIcon';
+import tsLogo from './icons/tsLogo.svg';
 
 // Components
 import Switch from './components/Switch';
-import Puff from './components/Puff';
-// import UsersTable from './components/UsersTable';
-// import Bars from './components/Bars';
-// import TailSpin from './components/TailSpin';
+import UsersTable from './components/UsersTable';
 
 // Dark Mode
 import useTheme from './hooks/useTheme';
@@ -39,7 +36,12 @@ function App(props: AppProps): JSX.Element {
 
     const handleAddRandomUser = async () => {
         setState({ ...state, loadingNewUser: true });
-        await addRandomUser();
+        try {
+            await addRandomUser();
+        } catch (err) {
+            console.error(err);
+            alert('Error connecting to database :(');
+        }
         setState({ ...state, loadingNewUser: false });
     };
 
@@ -48,11 +50,17 @@ function App(props: AppProps): JSX.Element {
     };
 
     const handleFetchUsers = async () => {
+
         setState({
             ...state,
             loading: true
         });
-        await fetchUsers();
+        try {
+            await fetchUsers();
+        } catch (err) {
+            console.error(err);
+            alert('Error fetching users :(');
+        }
         // if (!props.users.length) {
         //     alert('No users found');
         // }
@@ -64,58 +72,31 @@ function App(props: AppProps): JSX.Element {
         // console.log('props', props);
     };
 
-    return (<div className={`App ${theme}`}>
-        <h1 className="title">{"<TypeScript Full Stack Workshop>"}</h1>
-        <Switch handleSwitch={handleThemeChange} />
-        <div id="main-container">
-            <div className="table-buttons">
-                <button onClick={handleFetchUsers}>Fetch Users</button>
-                <button onClick={handleAddRandomUser}> Add Random User</button>
-            </div>
+    return (
+        <div className={`App ${theme}`}>
 
-            <div className="loading-icons" style={{ marginBottom: "2%" }}>
-                {state.loading && <Puff stroke="#98ff98" />}
-                {state.loadingNewUser && <Puff stroke="#A084E8" />}
-            </div>
-
-            {/* {props?.users?.length > 0 &&
-                <UsersTable
-                    users={props.users}
-                    loading={state.loading}
-                    handleDelete={handleDelete}
+            <h1 className="title">
+                {"< "}
+                <img
+                    src={tsLogo} style={{ display: "inline" }}
                 />
-            } */}
+                {" Full Stack Workshop >"}
+            </h1>
 
+            <Switch handleSwitch={handleThemeChange} />
 
-            {props?.users?.length > 0 && <table id="table-users">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Last Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {[...props.users]?.reverse()?.map((user: User) => {
-                        return (
-                            <tr key={user.id}>
-                                <td>{user.id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.lastName}</td>
-                                <td>
-                                    <button onClick={() =>
-                                        handleDelete(user.id)}>
-                                        <TrashIcon />
-                                    </button>
-                                </td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>}
+            <UsersTable
+                users={props.users}
+                loading={state.loading}
+                loadingNewUser={state.loadingNewUser}
+                handleDelete={handleDelete}
+                handleAddRandomUser={handleAddRandomUser}
+                handleFetchUsers={handleFetchUsers}
+            />
+
         </div>
-    </div>);
+    );
+
 }
 
 const mapStateToProps = (state: StoreState): { users: User[]; } => {
