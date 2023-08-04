@@ -21,6 +21,7 @@ const config = {
     dbDeployHost: (_c = process.env.DB_DEPLOY_HOST) !== null && _c !== void 0 ? _c : 'localhost',
     dbDeployName: (_d = process.env.DB_DEPLOY_NAME) !== null && _d !== void 0 ? _d : 'workshop',
     dbDeployUser: (_e = process.env.DB_DEPLOY_USER) !== null && _e !== void 0 ? _e : 'postgres',
+    local: process.env.NODE_ENV === 'local',
 };
 exports.default = config;
 //# sourceMappingURL=config.js.map

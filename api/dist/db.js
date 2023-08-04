@@ -8,10 +8,10 @@ const config_1 = __importDefault(require("./lib/config"));
 config_1.default;
 const dbInstance = new sequelize_typescript_1.Sequelize({
     dialect: 'postgres',
-    database: config_1.default.dbDeployName || config_1.default.dbName,
-    password: config_1.default.dbDeployPassword || config_1.default.dbPassword,
-    username: config_1.default.dbDeployUser || config_1.default.dbUser,
-    host: config_1.default.dbDeployHost || config_1.default.host,
+    database: config_1.default.local ? config_1.default.dbDeployName : config_1.default.dbName,
+    password: config_1.default.local ? config_1.default.dbDeployPassword : config_1.default.dbPassword,
+    username: config_1.default.local ? config_1.default.dbDeployUser : config_1.default.dbUser,
+    host: config_1.default.local ? config_1.default.dbDeployHost : config_1.default.host,
     storage: ':memory:',
     logging: false,
     dialectOptions: {
