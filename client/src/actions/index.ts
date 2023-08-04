@@ -12,7 +12,7 @@ const generateRandomUser = () => {
 };
 
 
-const ROOT_URL = 'http://localhost:3001/api';
+const ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
 
 export const fetchUsers = () => {
     return async (dispatch: Dispatch<FetchUserAction>) => {
