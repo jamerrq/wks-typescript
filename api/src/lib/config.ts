@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+// console.log('Config: ', process.env);
+
 const config = {
 
     dbUser: process.env.DB_USER || 'postgres',
@@ -13,11 +15,11 @@ const config = {
     port: process.env.API_PORT || '3001',
     host: process.env.API_host || 'localhost',
     cors: process.env.CORS || '*',
-    dbDeploy: process.env.DB_DEPLOY ?? 'postgres',
-    dbDeployPassword: process.env.DB_DEPLOY_PASS ?? '1234',
-    dbDeployHost: process.env.DB_DEPLOY_HOST ?? 'localhost',
-    dbDeployName: process.env.DB_DEPLOY_NAME ?? 'workshop',
-    dbDeployUser: process.env.DB_DEPLOY_USER ?? 'postgres',
+    dbDeploy: process.env.DB_DEPLOY,
+    dbDeployPassword: process.env.DB_DEPLOY_PASS,
+    dbDeployHost: process.env.DB_DEPLOY_HOST,
+    dbDeployName: process.env.DB_DEPLOY_NAME,
+    dbDeployUser: process.env.DB_DEPLOY_USER,
     local: process.env.NODE_ENV === 'local',
 
 };
