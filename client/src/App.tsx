@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react';
 import { fetchUsers, deleteUsers, addRandomUser } from './actions';
 
 // SVG Icons
-import tsLogo from './icons/tsLogo.svg';
+import TsLogo from './icons/TsLogo';
 
 // Components
 import Switch from './components/Switch';
 import UsersTable from './components/UsersTable';
+import Footer from './components/Footer';
 
 // Dark Mode
 import useTheme from './hooks/useTheme';
@@ -77,9 +78,7 @@ function App(props: AppProps): JSX.Element {
 
             <h1 className="title">
                 {"< "}
-                <img
-                    src={tsLogo} style={{ display: "inline" }}
-                />
+                <TsLogo width="1.5em" height="1.5em" fill="#3178c6" />
                 {" Full Stack Workshop >"}
             </h1>
 
@@ -93,6 +92,8 @@ function App(props: AppProps): JSX.Element {
                 handleAddRandomUser={handleAddRandomUser}
                 handleFetchUsers={handleFetchUsers}
             />
+
+            <Footer />
 
         </div>
     );

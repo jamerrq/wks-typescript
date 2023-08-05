@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { Dispatch } from 'redux';
-import { ActionTypes, DeleteUserAction, FetchUserAction, AddRandomUserAction } from './types';
+import {
+    ActionTypes, DeleteUserAction, FetchUserAction, AddRandomUserAction
+} from './types';
 
 
 const generateRandomUser = () => {
@@ -11,8 +13,14 @@ const generateRandomUser = () => {
     return randomUser;
 };
 
-
-const ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
+const { MODE } = import.meta.env;
+let ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
+if (MODE === 'development') {
+    ROOT_URL = 'http://localhost:3001/api';
+    console.log('[MODE] development environment 🤖');
+} else {
+    console.log('[MODE] production environment 🤓');
+}
 
 export const fetchUsers = () => {
     return async (dispatch: Dispatch<FetchUserAction>) => {
