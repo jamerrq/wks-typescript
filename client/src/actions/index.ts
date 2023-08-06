@@ -13,13 +13,13 @@ const generateRandomUser = () => {
     return randomUser;
 };
 
-const { MODE } = import.meta.env;
+const { VITE_BACK_MODE: BACK_MODE } = import.meta.env;
 let ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
-if (MODE === 'development') {
+if (BACK_MODE === 'local') {
     ROOT_URL = 'http://localhost:3001/api';
-    console.log('[MODE] development environment 🤖');
+    console.log('[BACK-SOURCE] local environment 🤖');
 } else {
-    console.log('[MODE] production environment 🤓');
+    console.log('[BACK-SOURCE] production environment 🚀');
 }
 
 export const fetchUsers = () => {

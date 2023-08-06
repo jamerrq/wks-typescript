@@ -27,4 +27,5 @@ interface AppProps {
 
 interface SwitchProps {
     handleSwitch(): void;
+    labelContent: string;
 }

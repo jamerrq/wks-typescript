@@ -79,10 +79,13 @@ function App(props: AppProps): JSX.Element {
             <h1 className="title">
                 {"< "}
                 <TsLogo width="1.5em" height="1.5em" fill="#3178c6" />
-                {" Full Stack Workshop >"}
+                {" Full Stack Workshop />"}
             </h1>
 
-            <Switch handleSwitch={handleThemeChange} />
+            <Switch
+                handleSwitch={handleThemeChange}
+                labelContent={theme === "light" ? "Dark Mode" : "Light Mode"}
+            />
 
             <UsersTable
                 users={props.users}

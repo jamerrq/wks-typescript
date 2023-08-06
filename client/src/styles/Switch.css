@@ -2,14 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    /* gap: 2rem; */
+    max-width: 0;
 }
 
 /* The switch - the box around the slider */
-.switch {
+label.switch {
     font-size: 17px;
     position: fixed;
-    top: 1rem;
+    top: 1.5rem;
     right: 1rem;
     display: inline-block;
     width: 3.5em;
@@ -50,7 +51,7 @@
 }
 
 input:checked+.slider {
-    background-color: var(--accent);
+    background-color: var(--tscolor);
 }
 
 
@@ -58,9 +59,12 @@ input:checked+.slider:before {
     transform: translateX(1.5em);
 }
 
-.container-switch label {
+.container-switch label label {
     font-size: 1rem;
     font-family: "Virgil";
-    color: var(--accent);
+    color: var(--text-alternate);
     display: grid;
+    position: relative;
+    top: -0.5rem;
+    right: 3.5rem;
 }
