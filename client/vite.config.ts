@@ -5,5 +5,8 @@ import million from 'million/compiler';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    server: {
+        port: 5174,
+    },
     plugins: [million.vite(), react()],
 });
