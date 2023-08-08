@@ -4,15 +4,15 @@
 
 @font-face {
     font-family: 'Virgil';
-    src: url('../assets/Virgil.woff2') format('woff2');
+    src: url('../assets/fonts/Virgil.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face{
+@font-face {
     font-family: 'Karla';
-    src: url('../assets/Karla-VariableFont_wght.ttf');
+    src: url('../assets/fonts/Karla-VariableFont_wght.ttf');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -38,6 +38,13 @@
     --border: #1f1e1e;
     --shadow: 7px 15px 13px -4px #00000056;
     --tscolor: #3178c6;
+    --tsbg: #f1f5f9;
+    --tsborder: #cdd7e0;
+    --tsborderhover: #b8c2cc;
+    --tsborderfocus: #9fb0bf;
+    --tsbordererror: #e53e3e;
+    --tsbordererrorhover: #c53030;
+    --tsdark: #1f2937;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -45,6 +52,29 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
+
+#root {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: calc(100vw - (100vw - 100%));
+    height: 100%;
+    min-height: 100vh;
+    /* display: flex; */
+}
+
+#root * {
+    box-sizing: border-box;
+}
+
+#root>div {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+}
+
 
 /* [data-theme='dark'] {
     --background: #05010a;
@@ -72,8 +102,7 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    /* background-color: var(--background);
-    color: var(--text-primary); */
+    background-color: var(--background);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }

@@ -5,12 +5,19 @@ import {
 } from './types.d';
 
 
-const generateRandomUser = () => {
-    const randomUser = {
-        name: Math.random().toString(36).substring(7),
-        lastName: Math.random().toString(36).substring(7)
+const api = 'https://randomuser.me/api/';
+const generateRandomUser = async () => {
+    const response = await axios.get(api);
+    const { results } = response.data;
+    const { name, } = results[0];
+    const user = {
+        name: name.first,
+        lastName: name.last,
+        // email,
+        // phone,
+        // picture: picture.thumbnail
     };
-    return randomUser;
+    return user;
 };
 
 const { VITE_BACK_MODE: BACK_MODE } = import.meta.env;
@@ -43,14 +50,12 @@ export const deleteUsers = (id: number) => {
 };
 
 export const addRandomUser = () => {
-
     return async (dispatch: Dispatch<AddRandomUserAction>) => {
-        const randomUser = generateRandomUser();
+        const randomUser = await generateRandomUser();
         const response = await axios.post(`${ROOT_URL}/users`, randomUser);
         dispatch<AddRandomUserAction>({
             type: ActionTypes.addRandomUser,
             payload: response.data
         });
     };
-
 };
