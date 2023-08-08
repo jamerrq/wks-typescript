@@ -8,7 +8,10 @@ following technologies:
 ![React](https://img.shields.io/badge/React%20(TSX)%20-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Vite
 4](https://img.shields.io/badge/Vite%204%20-%23323330.svg?style=for-the-badge&logo=vite&logoColor=white)
-[![Million](./client/src/icons/million.svg)](https://million.dev/)
+![Tailwind
+CSS](https://img.shields.io/badge/Tailwind%20CSS%20-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+Now deployed on Vercel! Check it out [here](https://wks-typescript.vercel.app/).
 
 ## Backend
 

@@ -16,7 +16,6 @@ import {
 import useTheme from './hooks/useTheme';
 
 
-// eslint-disable-next-line react-refresh/only-export-components
 const App = (props: AppProps): JSX.Element => {
 
     const { fetchUsers, deleteUsers, addRandomUser } = props;

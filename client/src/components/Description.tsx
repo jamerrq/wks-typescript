@@ -14,11 +14,15 @@ const Description = (): JSX.Element => {
                 with Sequelize.
             </p>
             <p>
-                The app is hosted on <a href='https://vercel.com/'> Vercel
+                The client side is hosted on <a
+                    href='https://vercel.com/' target="_blank">Vercel
                 </a> and the database is hosted on <a
-                    href='https://www.elephantsql.com/'>
+                    href='https://www.elephantsql.com/' target="_blank">
                     ElephantSQL
-                </a>
+                </a> while the server is hosted on <a
+                    href='https://dashboard.render.com/' target="_blank">
+                    Render
+                </a>.
             </p>
 
             <p>To get started, click the "Fetch Users" button below.</p>

@@ -4,8 +4,12 @@ import '../styles/UsersTable.css';
 // Puff
 import Puff from './Puff';
 
-// Icons
+// Custom Icons
 import TrashIcon from "../icons/TrashIcon";
+
+// React Icons
+import { AiOutlineCloudDownload } from 'react-icons/ai';
+import { GiPerspectiveDiceSixFacesRandom } from 'react-icons/gi';
 
 
 interface UsersTableProps {
@@ -23,11 +27,13 @@ const UsersTable = (props: UsersTableProps): JSX.Element => {
     return (
         <div id="main-container">
             <div className="table-buttons">
-                <button onClick={props.handleFetchUsers}>Fetch Users</button>
+                <button onClick={props.handleFetchUsers}>
+                    Fetch Users <AiOutlineCloudDownload />
+                </button>
                 {
                     props.usersLoaded &&
                     <button onClick={props.handleAddRandomUser}>
-                        Add Random User
+                        Add Random <GiPerspectiveDiceSixFacesRandom />
                     </button>
                 }
             </div>
