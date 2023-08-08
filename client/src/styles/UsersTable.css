@@ -1,0 +1,39 @@
+.table-buttons {
+    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.table-buttons>button {
+    border: 2px solid #3178c6;
+    background-color: #3178c688;
+}
+
+.table-buttons>button:hover {
+    border: 2px solid var(--accent);
+    background-color: #dfb01788;
+}
+
+.delete-button {
+    border: 2px solid var(--border);
+    width: 50px;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #D21312;
+    /* display: flex;
+    align-content: center; */
+}
+
+.delete-button:hover {
+    border: 2px solid var(--accent-hover);
+    background-color: var(--accent);
+}
+
+/* .trash-icon {
+    width: 20px;
+    height: 20px;
+} */

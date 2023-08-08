@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Dispatch } from 'redux';
 import {
     ActionTypes, DeleteUserAction, FetchUserAction, AddRandomUserAction
-} from './types';
+} from './types.d';
 
 
 const generateRandomUser = () => {
@@ -17,9 +17,9 @@ const { VITE_BACK_MODE: BACK_MODE } = import.meta.env;
 let ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
 if (BACK_MODE === 'local') {
     ROOT_URL = 'http://localhost:3001/api';
-    console.log('[BACK-SOURCE] local environment 🤖');
+    console.log('[BACK-SOURCE] FETCHING DATA FROM LOCAL 🤖');
 } else {
-    console.log('[BACK-SOURCE] production environment 🚀');
+    console.log('[BACK-SOURCE] FETCHING DATA FROM DEPLOY 🚀');
 }
 
 export const fetchUsers = () => {

@@ -1,7 +1,7 @@
 import './styles/App.css';
 import { connect } from 'react-redux';
 import { useEffect, useState } from 'react';
-import { fetchUsers, deleteUsers, addRandomUser } from './actions';
+import * as actions from './actions';
 
 // SVG Icons
 import TsLogo from './icons/TsLogo';
@@ -10,6 +10,7 @@ import TsLogo from './icons/TsLogo';
 import Switch from './components/Switch';
 import UsersTable from './components/UsersTable';
 import Footer from './components/Footer';
+import AppDescription from './components/Description';
 
 // Dark Mode
 import useTheme from './hooks/useTheme';
@@ -25,7 +26,10 @@ function App(props: AppProps): JSX.Element {
     const [state, setState] = useState({
         loading: false,
         loadingNewUser: false,
+        usersLoaded: false,
     });
+
+    const [firstRender, setFirstRender] = useState(false);
 
     useEffect(() => {
         // fetchUsers();
@@ -54,10 +58,11 @@ function App(props: AppProps): JSX.Element {
 
         setState({
             ...state,
-            loading: true
+            loading: true,
         });
         try {
             await fetchUsers();
+            setFirstRender(true);
         } catch (err) {
             console.error(err);
             alert('Error fetching users :(');
@@ -73,12 +78,18 @@ function App(props: AppProps): JSX.Element {
         // console.log('props', props);
     };
 
+    const showDescription = () => {
+        setFirstRender(state => !state);
+    };
+
     return (
         <div className={`App ${theme}`}>
 
             <h1 className="title">
                 {"< "}
-                <TsLogo width="1.5em" height="1.5em" fill="#3178c6" />
+                <a onClick={showDescription}>
+                    <TsLogo width="1.5em" height="1.5em" fill="#3178c6" />
+                </a>
                 {" Full Stack Workshop />"}
             </h1>
 
@@ -87,17 +98,19 @@ function App(props: AppProps): JSX.Element {
                 labelContent={theme === "light" ? "Dark Mode" : "Light Mode"}
             />
 
+            {firstRender ? null : <AppDescription />}
+
             <UsersTable
                 users={props.users}
                 loading={state.loading}
                 loadingNewUser={state.loadingNewUser}
+                usersLoaded={firstRender}
                 handleDelete={handleDelete}
                 handleAddRandomUser={handleAddRandomUser}
                 handleFetchUsers={handleFetchUsers}
             />
 
             <Footer />
-
         </div>
     );
 
@@ -110,6 +123,5 @@ const mapStateToProps = (state: StoreState): { users: User[]; } => {
 };
 
 
-const connectedApp = connect(mapStateToProps,
-    { fetchUsers, deleteUsers, addRandomUser })(App);
+const connectedApp = connect(mapStateToProps, actions)(App);
 export default connectedApp;

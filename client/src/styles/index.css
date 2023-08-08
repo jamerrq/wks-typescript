@@ -10,6 +10,14 @@
     font-display: swap;
 }
 
+@font-face{
+    font-family: 'Karla';
+    src: url('../assets/Karla-VariableFont_wght.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     font-family: "Virgil", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -88,9 +96,9 @@ button {
     transition: border-color 0.25s;
 }
 
-button:hover {
+/* button:hover {
     border-color: #646cff;
-}
+} */
 
 button:focus,
 button:focus-visible {

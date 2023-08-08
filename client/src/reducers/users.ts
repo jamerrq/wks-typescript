@@ -1,5 +1,7 @@
-import { ActionTypes, FetchUserAction, DeleteUserAction, AddRandomUserAction } from '../actions/types';
-import { User } from '../actions/types';
+import {
+    ActionTypes, FetchUserAction, DeleteUserAction, AddRandomUserAction, User
+} from '../actions/types.d';
+
 
 type Action = FetchUserAction | DeleteUserAction | AddRandomUserAction;
 

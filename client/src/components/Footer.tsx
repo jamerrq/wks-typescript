@@ -3,9 +3,9 @@ import '../styles/Footer.css';
 
 // React Icons
 import { IconContext } from 'react-icons';
-import { TbPlus, TbBrandVite, TbBrandTypescript } from 'react-icons/tb/';
+import { TbPlus, TbBrandVite, TbBrandReact } from 'react-icons/tb/';
 import { BsGithub } from 'react-icons/bs';
-import { SiPostgresql } from 'react-icons/si';
+import { BiLogoPostgresql, BiLogoTypescript, } from 'react-icons/bi';
 
 
 const ownStyle = (icon?: JSX.Element) => (
@@ -32,7 +32,7 @@ const Footer = (): JSX.Element => {
                 className='footerIcons'
                 aria-label='typescript'
             >
-                {ownStyle(<TbBrandTypescript
+                {ownStyle(<BiLogoTypescript
                     width={squareSize} height={squareSize} />)}
             </a>
             &nbsp; <TbPlus /> &nbsp;
@@ -43,15 +43,23 @@ const Footer = (): JSX.Element => {
             >
                 {ownStyle(<TbBrandVite />)}
             </a>
+            &nbsp; <a href="https://react.dev/"
+                target='_blank'
+                className='footerIcons'
+                aria-label='vite'
+            >
+                {ownStyle(<TbBrandReact />)}
+            </a>
             &nbsp; <TbPlus /> &nbsp;
             <a href="https://postgresql.org"
                 target='_blank'
                 className='footerIcons'
                 aria-label='postgresql'
             >
-                {ownStyle(<SiPostgresql />)}
+                {/* {ownStyle(<SiPostgresql />)} */}
+                {ownStyle(<BiLogoPostgresql />)}
             </a>
-            &nbsp; take a look at the repo here:&nbsp;
+            &nbsp; take a look at the repository here:&nbsp;
             <a
                 href="https://github.com/jamerrq/wks-typescript"
                 target='_blank'

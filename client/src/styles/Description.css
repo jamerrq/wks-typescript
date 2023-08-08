@@ -1,0 +1,15 @@
+.appDescription {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.2;
+    font-family: 'Karla', sans-serif;
+    width: 40%;
+    justify-self: center;
+}
+
+.appDescription p{
+    font-size: 15pt;
+}
