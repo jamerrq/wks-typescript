@@ -1,6 +1,6 @@
 import { combineReducers, Reducer } from "redux";
 import { usersReducer } from "./users";
-import { User } from "../actions/types";
+// import { User } from "../actions/types";
 
 interface StoreState {
     users: User[];

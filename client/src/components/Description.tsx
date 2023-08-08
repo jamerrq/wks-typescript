@@ -24,8 +24,11 @@ const Description = (): JSX.Element => {
                     Render
                 </a>.
             </p>
-
-            <p>To get started, click the "Fetch Users" button below.</p>
+            <br></br>
+            <p>To get started, click the <span style={{
+                color: "var(--tscolor)",
+                display: "inline-block"
+            }}>Fetch Users</span> button below.</p>
         </div>
     );
 };

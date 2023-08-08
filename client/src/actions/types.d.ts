@@ -18,9 +18,3 @@ export interface AddRandomUserAction {
     type: ActionTypes.addRandomUser;
     payload: User;
 }
-
-export interface User {
-    id: number;
-    name: string;
-    lastName: string;
-}

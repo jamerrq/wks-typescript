@@ -1,7 +1,10 @@
 declare interface UserAttributes {
-    id: number;
-    name: string;
-    lastName: string;
+    id: string;
+    fullname: string;
+    gender: string;
+    picture: string;
+    nat: string;
+    email: string;
 }
 
 export { UserAttributes };

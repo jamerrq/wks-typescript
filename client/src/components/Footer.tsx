@@ -24,6 +24,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='github'
+                data-title='Github Profile'
             >
                 @jamerrq
             </a>&nbsp;using&nbsp;
@@ -31,6 +32,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='typescript'
+                data-title='TypeScript'
             >
                 {ownStyle(<BiLogoTypescript
                     width={squareSize} height={squareSize} />)}
@@ -40,6 +42,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='vite'
+                data-title='Vite 4'
             >
                 {ownStyle(<TbBrandVite />)}
             </a>
@@ -47,6 +50,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='vite'
+                data-title='React'
             >
                 {ownStyle(<TbBrandReact />)}
             </a>
@@ -55,6 +59,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='postgresql'
+                data-title='PostgreSQL'
             >
                 {/* {ownStyle(<SiPostgresql />)} */}
                 {ownStyle(<BiLogoPostgresql />)}
@@ -65,6 +70,7 @@ const Footer = (): JSX.Element => {
                 target='_blank'
                 className='footerIcons'
                 aria-label='github repo'
+                data-title='Github Repository'
             >
                 {ownStyle(<BsGithub />)}
             </a>

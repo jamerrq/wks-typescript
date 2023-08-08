@@ -13,8 +13,11 @@ router.get('/', (req: Request, res: Response) => {
             const userData = user.toJSON() as UserAttributes;
             return {
                 id: userData.id,
-                name: userData.name,
-                lastName: userData.lastName,
+                fullname: userData.fullname,
+                gender: userData.gender,
+                picture: userData.picture,
+                nat: userData.nat,
+                email: userData.email,
             };
         }));
     }).catch((err) => {
@@ -36,18 +39,18 @@ router.post('/', (req: Request, res: Response) => {
 
 });
 
-// router.put('/:id', (req: Request, res: Response) => {
+router.put('/:id', (req: Request, res: Response) => {
 
-//     const id = req.params.id;
-//     const user = req.body;
-//     User.update(user, { where: { id } }).then((userUpdated) => {
-//         res.sendStatus(200).send(userUpdated);
-//     }).catch((err) => {
-//         console.error(err);
-//         res.sendStatus(500);
-//     });
+    const id = req.params.id;
+    const user = req.body;
+    User.update(user, { where: { id } }).then((userUpdated) => {
+        res.sendStatus(200).send(userUpdated);
+    }).catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+    });
 
-// });
+});
 
 router.delete('/:id', async (req: Request, res: Response) => {
 

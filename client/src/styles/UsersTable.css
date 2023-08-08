@@ -16,6 +16,19 @@
     background-color: #A1C2F1;
 }
 
+.id-column {
+    width: 8%;
+}
+
+td.user-thumbnail img {
+    border-radius: 50%;
+}
+
+td.user-thumbnail {
+    width: 100px;
+    height: 50px;
+}
+
 #table-users {
     width: 80%;
     table-layout: auto;
@@ -29,19 +42,21 @@
     /* transition: 0.3s all; */
 }
 
-#table-users th,
 #table-users td {
-    padding: 10px;
+    padding: 3px;
     border: 1px solid var(--border);
     /* overflow: hidden; */
     text-overflow: ellipsis;
     white-space: nowrap;
-    /* Add load transition */
 }
 
 #table-users:last-child,
 #table-users>thead>tr {
     border-bottom: 2px solid var(--border);
+}
+
+#table-users>thead>tr {
+    border-top: 2px solid var(--border);
 }
 
 #table-users>tbody>tr:hover {
@@ -51,10 +66,6 @@
 
 #table-users>tbody>tr>td {
     text-align: center;
-}
-
-#table-users>thead>tr {
-    border-top: 2px solid var(--border);
 }
 
 .table-buttons {
@@ -77,6 +88,11 @@
 
 thead th {
     font-weight: bold;
+    padding: 0.8rem;
+    border: 1px solid var(--border);
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .delete-button {
@@ -93,8 +109,8 @@ thead th {
 }
 
 .delete-button:hover {
-    border: 2px solid var(--accent-hover);
-    background-color: var(--accent);
+    border: 2px solid var(--border);
+    background-color: #F94C10;
 }
 
 /* .trash-icon {

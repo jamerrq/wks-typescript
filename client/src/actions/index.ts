@@ -9,25 +9,27 @@ const api = 'https://randomuser.me/api/';
 const generateRandomUser = async () => {
     const response = await axios.get(api);
     const { results } = response.data;
-    const { name, } = results[0];
+    const [data] = results;
     const user = {
-        name: name.first,
-        lastName: name.last,
-        // email,
-        // phone,
-        // picture: picture.thumbnail
+        id: data.login.uuid,
+        fullname: `${data.name.first} ${data.name.last}`,
+        gender: data.gender,
+        picture: JSON.stringify(data.picture),
+        nat: data.nat,
+        email: data.email
     };
     return user;
 };
 
 const { VITE_BACK_MODE: BACK_MODE } = import.meta.env;
 let ROOT_URL = 'https://wks-typescript-server.onrender.com/api';
+let MODE_MSG = 'FETCHING DATA FROM DEPLOY 🚀';
 if (BACK_MODE === 'local') {
     ROOT_URL = 'http://localhost:3001/api';
-    console.log('[BACK-SOURCE] FETCHING DATA FROM LOCAL 🤖');
-} else {
-    console.log('[BACK-SOURCE] FETCHING DATA FROM DEPLOY 🚀');
+    MODE_MSG = 'FETCHING DATA FROM LOCAL 🏠';
 }
+console.log(`[DATA-SOURCE] : ${MODE_MSG}`);
+
 
 export const fetchUsers = () => {
     return async (dispatch: Dispatch<FetchUserAction>) => {

@@ -9,9 +9,12 @@ interface actionInterface {
 }
 
 interface User {
-    id: number;
-    name: string;
-    lastName: string;
+    id: string;
+    fullname: string;
+    email: string;
+    gender: string;
+    nat: string;
+    picture: string;
 }
 
 interface StoreState {

@@ -1,17 +1,32 @@
 import {
-    Model, Column, Table, CreatedAt, UpdatedAt,
+    Model, Column, Table, CreatedAt, UpdatedAt, PrimaryKey,
 } from "sequelize-typescript";
 import { InferCreationAttributes } from "sequelize/types";
 import { UserAttributes } from "./types";
+import { UUID } from "crypto";
 
 
 @Table
 export class User extends Model<UserAttributes, InferCreationAttributes<User>> {
+
+    @PrimaryKey
     @Column
-    name!: string;
+    id!: UUID;
 
     @Column
-    lastName!: string;
+    fullname!: string;
+
+    @Column
+    gender!: string;
+
+    @Column
+    picture!: string;
+
+    @Column
+    nat!: string;
+
+    @Column
+    email!: string;
 
     @CreatedAt
     @Column
@@ -20,4 +35,5 @@ export class User extends Model<UserAttributes, InferCreationAttributes<User>> {
     @UpdatedAt
     @Column
     updatedAt!: Date;
+
 }
