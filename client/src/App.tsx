@@ -34,7 +34,7 @@ const App = (props: AppProps): JSX.Element => {
         // fetchUsers();
     }, [fetchUsers]);
 
-    const handleDelete = async (id: number) => {
+    const handleDelete = async (id: string) => {
         deleteUsers(id);
     };
 

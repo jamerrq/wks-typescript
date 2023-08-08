@@ -1,5 +1,5 @@
 import {
-    ActionTypes, FetchUserAction, DeleteUserAction, AddRandomUserAction, User
+    ActionTypes, FetchUserAction, DeleteUserAction, AddRandomUserAction,
 } from '../actions/types.d';
 
 

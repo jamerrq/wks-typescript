@@ -24,7 +24,7 @@ interface StoreState {
 interface AppProps {
     users: User[];
     fetchUsers(): void;
-    deleteUsers(id: number): void;
+    deleteUsers(id: string): void;
     addRandomUser(): void;
 }
 
