@@ -1,23 +1,23 @@
-import './styles/App.css';
 import { connect } from 'react-redux';
 import { useEffect, useState } from 'react';
 import * as actions from './actions';
 
+// Styles
+import './styles/App.css';
 // SVG Icons
 import TsLogo from './icons/TsLogo';
 
 // Components
-import Switch from './components/Switch';
-import UsersTable from './components/UsersTable';
-import Footer from './components/Footer';
-import AppDescription from './components/Description';
+import {
+    Switch, UsersTable, Footer, Description,
+} from './components/mod';
 
 // Dark Mode
 import useTheme from './hooks/useTheme';
 
 
 // eslint-disable-next-line react-refresh/only-export-components
-function App(props: AppProps): JSX.Element {
+const App = (props: AppProps): JSX.Element => {
 
     const { fetchUsers, deleteUsers, addRandomUser } = props;
 
@@ -60,6 +60,7 @@ function App(props: AppProps): JSX.Element {
             ...state,
             loading: true,
         });
+
         try {
             await fetchUsers();
             setFirstRender(true);
@@ -67,15 +68,12 @@ function App(props: AppProps): JSX.Element {
             console.error(err);
             alert('Error fetching users :(');
         }
-        // if (!props.users.length) {
-        //     alert('No users found');
-        // }
+
         setState({
             ...state,
             loading: false,
         });
-        // console.log('state', state);
-        // console.log('props', props);
+
     };
 
     const showDescription = () => {
@@ -98,7 +96,7 @@ function App(props: AppProps): JSX.Element {
                 labelContent={theme === "light" ? "Dark Mode" : "Light Mode"}
             />
 
-            {firstRender ? null : <AppDescription />}
+            {firstRender ? null : <Description />}
 
             <UsersTable
                 users={props.users}
@@ -114,7 +112,7 @@ function App(props: AppProps): JSX.Element {
         </div>
     );
 
-}
+};
 
 const mapStateToProps = (state: StoreState): { users: User[]; } => {
     return {

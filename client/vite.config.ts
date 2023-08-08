@@ -8,5 +8,5 @@ export default defineConfig({
     server: {
         port: 5174,
     },
-    plugins: [million.vite(), react()],
+    plugins: [million.vite({auto: true}), react()],
 });

@@ -9,7 +9,7 @@ TypeScript](https://img.shields.io/badge/React(TSX)%20-%2320232a.svg?style=for-t
 ![Axios](https://img.shields.io/badge/Axios%20-%23232F3E.svg?style=for-the-badge&logo=axios&logoColor=white)
 ![Vite
 4](https://img.shields.io/badge/Vite%204%20-%23323330.svg?style=for-the-badge&logo=vite&logoColor=white)
-[![Million](./src/icons/million.svg)](https://million.dev/)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS%20-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## Additional Dependencies
 
@@ -26,6 +26,7 @@ TypeScript](https://img.shields.io/badge/React(TSX)%20-%2320232a.svg?style=for-t
 - [X] Create a new (random) user
 - [X] Fetch all users from the database
 - [X] Delete a user
+- [ ] Fetch mock data from an external API and save it to the database
 - [ ] Edit an existing user
 - [ ] Create a new user from a form
 - [ ] Reset the database

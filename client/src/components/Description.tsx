@@ -1,7 +1,7 @@
-import '../styles/Description.css';
+import '../styles/AppDescription.css';
 
 
-const AppDescription = (): JSX.Element => {
+const Description = (): JSX.Element => {
     return (
         <div className='appDescription'>
             <p>
@@ -22,4 +22,4 @@ const AppDescription = (): JSX.Element => {
 };
 
 
-export default AppDescription;
+export default Description;
