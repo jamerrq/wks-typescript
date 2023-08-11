@@ -1,6 +1,3 @@
-// Styles
-import '../styles/UsersTable.css';
-
 // Puff
 import Puff from './Puff';
 
@@ -40,7 +37,7 @@ const countries: { [key: string]: string[]; } = {
     'US': ['🇺🇸', 'United States'],
 };
 
-const UsersTable = (props: UsersTableProps): JSX.Element => {
+export default (props: UsersTableProps): JSX.Element => {
 
     return (
         <div id="main-container" className="flex w-10/12 flex-col h-full items-center ">
@@ -134,6 +131,3 @@ const UsersTable = (props: UsersTableProps): JSX.Element => {
     );
 
 };
-
-
-export default UsersTable;
