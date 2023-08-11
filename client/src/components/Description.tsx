@@ -17,7 +17,7 @@ export default (): JSX.Element => {
                 external database.
             </p>
             <p className="text-xl">
-                For the front end, I used React and TypeScript.
+                For the front end, I used React and TypeScript with Tailwind CSS.
                 For the back end, I used Node.js, Express, and Postgres
                 with Sequelize.
             </p>
