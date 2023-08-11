@@ -5,7 +5,7 @@ import sequelize from './db';
 
 
 const port = process.env.API_PORT || 3001;
-sequelize.sync({ force: true, logging: false }).then(async () => {
+sequelize.sync({ logging: false }).then(async () => {
     await sequelize.authenticate();
     console.log('[DB] Database connected! :D');
     app.listen(port, () => {
