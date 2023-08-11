@@ -46,12 +46,17 @@
     --tsbordererror: #e53e3e;
     --tsbordererrorhover: #c53030;
     --tsdark: #1f2937;
+    --footer: #222;
+    --footer-font: #fff;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+    cursor: default;
+    user-select: none;
 }
 
 #root {
@@ -76,17 +81,6 @@
     min-height: 100vh;
 }
 
-
-/* [data-theme='dark'] {
-    --background: #05010a;
-    --text-primary: #f2f2f2;
-    --text-secondary: #a7a4a4;
-    --accent: #6a5acd;
-    --accent-hover: #5b4cbe;
-    --border: #696969;
-    --shadow: 7px 15px 13px -4px #ffffff1b;
-} */
-
 a {
     font-weight: 500;
     color: #646cff;
@@ -106,6 +100,7 @@ body {
     background-color: var(--background);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    cursor: default;
 }
 
 
@@ -126,9 +121,6 @@ button {
     transition: border-color 0.25s;
 }
 
-/* button:hover {
-    border-color: #646cff;
-} */
 
 button:focus,
 button:focus-visible {
@@ -137,7 +129,7 @@ button:focus-visible {
 
 [data-title]:hover:after {
     opacity: 1;
-    transition: all 0.1s ease 0.5s;
+    transition: all 0.1s ease 0.3s;
     visibility: visible;
 }
 
@@ -162,6 +154,7 @@ button:focus-visible {
     font-size: 0.8em;
     font-weight: 800;
     border: 1px solid var(--border);
+    font-family: Karla;
 }
 
 [data-title] {

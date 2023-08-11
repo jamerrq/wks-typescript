@@ -84,9 +84,12 @@ const App = (props: AppProps): JSX.Element => {
 
             <h1 className="title">
                 {"< "}
-                <a onClick={showDescription}>
-                    <TsLogo width="1.5em" height="1.5em" fill="#3178c6" />
-                </a>
+
+                <TsLogo
+                    width="1.5em" height="1.5em"
+                    fill="#3178c6" onClick={showDescription}
+                />
+
                 {" Full Stack Workshop />"}
             </h1>
 

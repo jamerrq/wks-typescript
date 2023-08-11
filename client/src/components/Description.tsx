@@ -1,19 +1,27 @@
-import '../styles/Description.css';
-
-
-const Description = (): JSX.Element => {
+export default (): JSX.Element => {
     return (
-        <div className='appDescription'>
-            <p>
-                This is a pretty simple full stack app that allows you to
-                create, read, update and delete users from an external database.
+        <div className='my-6 text-justify leading-normal font-karla w-1/2 justify-self-center select-text'>
+            <p className="text-xl">
+                <span
+                    className="text-blue-400 display: inline-block font-bold text-2xl mb-2 mt-4 text-center w-full"
+                > Welcome! </span>
+                <br />
+                This app is part of the <a
+                    href="https://typescriptlang.org" target="_blank">
+                    TypeScript
+                </a> workshop at{" the "}
+                <a href='https://www.soyhenry.com/' target="_blank">
+                    Soy Henry
+                </a> Full Stack Bootcamp.
+                It allows you to create, read, update and delete users from an
+                external database.
             </p>
-            <p>
+            <p className="text-xl">
                 For the front end, I used React and TypeScript.
                 For the back end, I used Node.js, Express, and Postgres
                 with Sequelize.
             </p>
-            <p>
+            <p className="text-xl">
                 The client side is hosted on <a
                     href='https://vercel.com/' target="_blank">Vercel
                 </a> and the database is hosted on <a
@@ -25,13 +33,10 @@ const Description = (): JSX.Element => {
                 </a>.
             </p>
             <br></br>
-            <p>To get started, click the <span style={{
-                color: "var(--tscolor)",
-                display: "inline-block"
-            }}>Fetch Users</span> button below.</p>
+            <p className="text-xl">To get started, click the <span
+                className="text-blue-400 display: inline-block"
+            >
+                Fetch Users</span> button below.</p>
         </div>
     );
 };
-
-
-export default Description;

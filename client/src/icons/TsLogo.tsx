@@ -1,12 +1,18 @@
 function TsLogo({
-    width = "28 pt", height = "28 pt", fill = '#3178c6',
+    width = "28 pt", height = "28 pt", fill = '#3178c6', ...props
 }): JSX.Element {
 
     return (
-        <svg fill={fill} version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width={width} height={height} viewBox="0 0 32.000000 32.000000"
-            preserveAspectRatio="xMidYMid meet">
-
+        <svg
+            fill={fill}
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width={width}
+            height={height}
+            viewBox={`0 0 32 32`}
+            preserveAspectRatio="xMidYMid meet"
+            {...props}
+        >
             <g
                 transform="translate(0.000000, 32.000000) scale(0.100000,-0.100000)"
                 fill={fill} stroke="none"
@@ -21,7 +27,7 @@ function TsLogo({
 15 0 12 13 15 60 15 47 0 60 -3 60 -15z"
                 />
             </g>
-        </svg>
+        </svg >
     );
 
 }

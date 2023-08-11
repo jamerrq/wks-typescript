@@ -1,28 +1,26 @@
-import '../styles/Footer.css';
-
-
 // React Icons
 import { IconContext } from 'react-icons';
 import { TbPlus, TbBrandVite, TbBrandReact } from 'react-icons/tb/';
 import { BsGithub } from 'react-icons/bs';
 import { BiLogoPostgresql, BiLogoTypescript, } from 'react-icons/bi';
+import { SiTailwindcss, SiExpress, SiSequelize } from 'react-icons/si';
 
 
 const ownStyle = (icon?: JSX.Element) => (
-    <IconContext.Provider value={{ className: "footerIcons", size: "1.35em" }}>
+    <IconContext.Provider value={{ className: "text-blue-400 hover:scale-125 hover:drop-shadow-[0_0_1px_#cdd7e0]", size: "1.2em" }}>
         {icon}
     </IconContext.Provider>
 );
 
 
-const Footer = (): JSX.Element => {
+export default (): JSX.Element => {
     const squareSize = '1.35em';
     return (
-        <footer>
+        <footer className="w-full fixed flex justify-center text-[--footer-font] py-1 bottom-0 items-center font-karla bg-[--footer] border-t border-[--border] space-x-0.5">
             Full Stack App created by&nbsp;
             <a href="https://github.com/jamerrq"
                 target='_blank'
-                className='footerIcons'
+                className='text-blue-400 hover:scale-105 hover:drop-shadow-[0_0_1px_#cdd7e0] hover:text-[--accent]'
                 aria-label='github'
                 data-title='Github Profile'
             >
@@ -54,8 +52,32 @@ const Footer = (): JSX.Element => {
             >
                 {ownStyle(<TbBrandReact />)}
             </a>
+            &nbsp; <a href="https://tailwindcss.com"
+                target='_blank'
+                className='footerIcons'
+                aria-label='tailwindcss'
+                data-title='Tailwind CSS'
+            >
+                {ownStyle(<SiTailwindcss />)}
+            </a>
             &nbsp; <TbPlus /> &nbsp;
-            <a href="https://postgresql.org"
+            <a href="https://expressjs.com"
+                target='_blank'
+                className='footerIcons'
+                aria-label='express'
+                data-title='Express'
+            >
+                {ownStyle(<SiExpress />)}
+            </a>
+            &nbsp; <a href="https://sequelize.org"
+                target='_blank'
+                className='footerIcons'
+                aria-label='sequelize'
+                data-title='Sequelize'
+            >
+                {ownStyle(<SiSequelize />)}
+            </a>
+            &nbsp; <a href="https://postgresql.org"
                 target='_blank'
                 className='footerIcons'
                 aria-label='postgresql'
@@ -64,7 +86,7 @@ const Footer = (): JSX.Element => {
                 {/* {ownStyle(<SiPostgresql />)} */}
                 {ownStyle(<BiLogoPostgresql />)}
             </a>
-            &nbsp; take a look at the repository here:&nbsp;
+            &nbsp; take a look at the repository here&nbsp;
             <a
                 href="https://github.com/jamerrq/wks-typescript"
                 target='_blank'
@@ -77,6 +99,3 @@ const Footer = (): JSX.Element => {
         </footer>
     );
 };
-
-
-export default Footer;
