@@ -7,7 +7,11 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        fontFamily: {
+            'karla': ['Karla', 'sans-serif'],
+            'roboto': ['Roboto', 'sans-serif'],
+            'virgil': ['Virgil', 'sans-serif'],
+        },
     },
     darkMode: "class",
 };

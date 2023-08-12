@@ -17,6 +17,17 @@ interface User {
     picture: string;
 }
 
+interface UsersTableProps {
+    users: User[];
+    loading: boolean;
+    loadingNewUser: boolean;
+    usersLoaded: boolean;
+    handleDelete: (id: string) => void;
+    handleAddRandomUser: () => void;
+    handleFetchUsers: () => void;
+}
+
+
 interface StoreState {
     users: User[];
 }
