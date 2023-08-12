@@ -101,6 +101,7 @@ export default (props: UsersTableProps): JSX.Element => {
 
     const filteredUsers = useMemo(() => {
         const { field, value } = filterBy;
+        // console.log({ field, value });
         if (!value) return props.users;
         switch (field) {
             case 'name':
@@ -180,7 +181,7 @@ export default (props: UsersTableProps): JSX.Element => {
                             <option value="country">Country</option>
                         </select>
                         <input type="text" className={input_cls}
-                            onChange={handleSearchInput} />
+                            onChange={handleSearchInput} spellCheck="false" />
                     </div>
                 }
             </div>
@@ -191,7 +192,7 @@ export default (props: UsersTableProps): JSX.Element => {
             </div>
 
             {
-                props?.users?.length > 0 && props.usersLoaded ?
+                filteredUsers?.length > 0 && props.usersLoaded ?
                     <table className={table_cls}>
                         <thead className="font-bold">
                             <tr className={tr_thead_cls}>
@@ -235,7 +236,7 @@ export default (props: UsersTableProps): JSX.Element => {
                                         <td data-title={country}>{flag}</td>
                                         <td align='center'
                                         >
-                                            <img className={img_cls}
+                                            <img className={user.gender !== 'female' ? mal_img_cls : fml_img_cls}
                                                 src={JSON.parse(
                                                     user.picture).thumbnail
                                                 }
@@ -271,7 +272,12 @@ export default (props: UsersTableProps): JSX.Element => {
                         </tbody>
                     </table> :
                     <div className="no-users">
-                        <h2>⚠️ No users loaded or found</h2>
+                        {props.usersLoaded && <h2
+                            className="font-karla text-[--accent]"
+                        >
+                            {props.users.length ? "No Results! Try another way"
+                                : "No Data Found at DB! Try adding a new user"}
+                        </h2>}
                     </div>
             }
         </div>
@@ -283,7 +289,8 @@ export default (props: UsersTableProps): JSX.Element => {
 // Tailwind classes
 const table_cls = 'w-4/5 table-auto font-karla font-medium mb-[50px] [&>*:last-child]:border-b-2 [&>*:last-child]:border-b-[--border] [&>thead>tr]:border-b-2 [&>thead>tr]:border-b-[--border] [&>thead>tr]:border-t-2 [&>thead>tr]:border-t-[--border] border-l border-l-[--border] border-r border-r-[--border]';
 const tr_thead_cls = '[&>th]:border-bottom [&>th]:p-3 [&>th]:border-[--border]';
-const img_cls = 'rounded-full border-2 border-[#3178c6]';
+const mal_img_cls = 'rounded-full border-2 border-[#3178c6]';
+const fml_img_cls = 'rounded-full border-2 border-[#974EC3]';
 const dlt_btn_cls = 'border-2 border-[--border] bg-[#D21312] rounded-full p-1.5 hover:bg-[#F94C10]';
 const select_cls = 'rounded font-karla bg-[#3178c6] text-center bg-[#3178c688] border-[#3178c6] border-2 px-1';
 const main_btn_cls = 'gap-16 flex justify-center mb-5 [&>button]:border-2 [&>button]:border-[#3178c6] [&>button]:bg-[#3178c688] [&>button]:font-karla [&>button:hover]:border-2 [&>button:hover]:bg-[#dfb01788] [&>button:hover]:border-[--accent]';
