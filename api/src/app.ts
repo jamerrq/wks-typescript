@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 
 app.use(
     cors({
-        origin: [config.cors, 'http://localhost:5174'],
+        origin: config.cors,
         credentials: true,
         methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
         allowedHeaders: ['Origin', 'X-Requested-With',
