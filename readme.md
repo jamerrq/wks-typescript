@@ -17,14 +17,12 @@ base to keep learning and improving my skills.
 
 ## Preview
 
-### v2.0.0 (current)
-![v2Landing](client/assets/v2LightLanding.png)
+### v3.0.0 (current)
+![v3Landing](client/assets/v3DarkLanding.png)
 
-### v2.0.0 Light Mode
-![v2Light](client/assets/v2Light.png)
+![v3Home](client/assets/v3DarkHome.png)
 
-### v2.0.0 Dark Mode
-![v2Dark](client/assets/v2Dark.png)
+![v3Filters](client/assets/v3DarkFilters.png)
 
 ## Frontend
 
