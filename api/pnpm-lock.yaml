@@ -78,7 +78,7 @@ devDependencies:
     version: 3.0.1
   sequelize-typescript:
     specifier: ^2.1.5
-    version: 2.1.5(@types/node@20.4.2)(@types/validator@13.9.0)(reflect-metadata@0.1.13)(sequelize@6.32.1)
+    version: 2.1.6(@types/node@20.4.2)(@types/validator@13.9.0)(reflect-metadata@0.1.13)(sequelize@6.32.1)
   supertest:
     specifier: ^6.3.3
     version: 6.3.3
@@ -2010,8 +2010,8 @@ packages:
     resolution: {integrity: sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg==}
     engines: {node: '>= 10.0.0'}
 
-  /sequelize-typescript@2.1.5(@types/node@20.4.2)(@types/validator@13.9.0)(reflect-metadata@0.1.13)(sequelize@6.32.1):
-    resolution: {integrity: sha512-x1CNODct8gJyfZPwEZBU5uVGNwgJI2Fda913ZxD5ZtCSRyTDPBTS/0uXciF+MlCpyqjpmoCAPtudQWzw579bzA==}
+  /sequelize-typescript@2.1.6(@types/node@20.4.2)(@types/validator@13.9.0)(reflect-metadata@0.1.13)(sequelize@6.32.1):
+    resolution: {integrity: sha512-Vc2N++3en346RsbGjL3h7tgAl2Y7V+2liYTAOZ8XL0KTw3ahFHsyAUzOwct51n+g70I1TOUDgs06Oh6+XGcFkQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       '@types/node': '*'
